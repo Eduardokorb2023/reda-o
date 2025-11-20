@@ -63,3 +63,9 @@ color: var(--cor-destaque);
 .modal-body{
   background-color:var(--cor-4)
 }
+
+.badge-grande {
+    font-size: 50px;  
+    padding: 15px 30px;  
+     border-radius: 20px;   
+}
