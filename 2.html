@@ -3,83 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="2.css">
 <title>Redação com Leitura em Voz</title>
 <a href="index.html" class="botao">volta</a>
-<style>
-  
-.img {
-    display: block;      
-    margin: 50px auto;    
-}
 
-
-.nuvem-pos {
-    position: absolute;
-    top: 100px;
-    left: 20px;
-    width: 100%;
-}
-
-.botao {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-.botao:hover {
-    background-color: #45a049;
-}
-
-body {
-    font-family: "Georgia", serif;
-    background-color: #f2f2f2;
-    min-height: 100vh;
-    padding: 20px;
-}
-
-.folha {
-    background-color: #fff;
-    padding: 40px;
-    max-width: 800px;
-    width: 100%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    border-radius: 10px;
-    position: relative;
-    line-height: 1.6;
-    margin: 0 auto;  /* Centraliza sem flex */
-}
-
-.redacao {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.botao-voz {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.botao-voz:hover {
-    background-color: #45a049;
-}
-</style>
 </head>
 <body>
 
@@ -93,7 +20,7 @@ body {
 No Brasil o número de ocorrência de preconceito contra pessoas com deficiência é uma realidade não muito percebida por outras pessoas, mas é uma realidade nesse país, pessoas com deficiência no Brasil são sujeitas a preconceitos antes mesmo de perceberam, seja em uma vaga de emprego a qual não foi contratado ou em tratamento de outras pessoas que é diferente do resto, essas são coisas as quais pessoas com deficiència são expostas nesse país, e mesmo com tudo isso tem pessoas que devem pensar que está tudo bem, o Brasil os disque 100 registro 657,2 mil denúncias em 2024, isso foi um aumento de 22,6% em relação a 2023, segundo PCDs, então não está tudo bem. As pessoas com deficiência sofrem com dificuldades em diversas situações, e estar em um país que não está preparado para ajudar, só dificulta para essas pessoas, por isso que no Brasil é importante que tenha mais campanhas para melhorar a estrutura e conscientizar mais as pessoas, também é importante que tenha mais leis, como a de acessibilidade, para ter mais estrutura em cidades e em outros lugares, para ajudar mais essas pessoas e ter um país melhor.
         </p>
     </div>
-    <button class="botao-voz" onclick="lerRedacao()">🔊 Ouvir Redação</button>
+    <button class="botao-voz" onclick="lerRedacao()"> Ouvir Redação</button>
 </div>
 
 <script>
@@ -101,7 +28,7 @@ function lerRedacao() {
     const texto = document.getElementById('redacao').innerText;
     const fala = new SpeechSynthesisUtterance(texto);
     fala.lang = 'pt-BR';
-    fala.rate = 1; // velocidade da voz
+    fala.rate = 1; 
     speechSynthesis.speak(fala);
 }
 </script>
