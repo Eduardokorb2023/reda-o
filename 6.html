@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redação com Leitura em Voz</title>
+<a href="index.html" class="botao">volta</a>
+<style>
+   
+.img {
+    display: block;      
+    margin: 50px auto;    
+}
+
+
+.nuvem-pos {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    width: 100%;
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.botao:hover {
+    background-color: #45a049;
+}
+
+body {
+    font-family: "Georgia", serif;
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.folha {
+    background-color: #fff;
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    position: relative;
+    line-height: 1.6;
+    margin: 0 auto;  /* Centraliza sem flex */
+}
+
+.redacao {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.botao-voz {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.botao-voz:hover {
+    background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<div class="folha">
+    <div class="redacao" id="redacao">
+        <h2>Redação: excesso de ultraprocessados na saúde</h2>
+        <p>
+
+O consumo excessivo de alimentos ultraprocessados é um problema, pois quando o assunto é alimento, a saúde também é afetada, já que a alimentação afeta diretamente na saúde. Quando uma pessoa é saudável, logo se pensa que ela tem uma alimentação boa também.
+
+Os ultraprocessados afetam na saúde, mas nem sempre quem é saudável tem a alimentação 100% saudável, pois muitas vezes essas pessoas praticam atividades físicas que compensam parte dos efeitos da má alimentação. No entanto, isso não significa que o consumo excessivo desses alimentos não vá afetam na saúde, pelo contrário, o consumo só é permitido com moderação e só às vezes, como dito: tudo em excesso faz mal". Por isso é importante ter uma dieta bem regulada.
+
+A saúde depende da alimentação, por isso é importante ter uma dieta bem definida para evitar os ultraprocessados, que podem ser considerados uma alternativa devido à falta de tempo, uma solução é otimizar a rotina, fazendo alimentos previamente que podem só ser esquentados, e com uma dieta bem definida, a saúde agradece.
+        </p>
+    </div>
+    <button class="botao-voz" onclick="lerRedacao()">🔊 Ouvir Redação</button>
+</div>
+
+<script>
+function lerRedacao() {
+    const texto = document.getElementById('redacao').innerText;
+    const fala = new SpeechSynthesisUtterance(texto);
+    fala.lang = 'pt-BR';
+    fala.rate = 1; // velocidade da voz
+    speechSynthesis.speak(fala);
+}
+</script>
+
+</body>
+</html>
+
+
+            <img class="img" src="6.png" alt="nuvem-pos" width="70%" height="auto">

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redação com Leitura em Voz</title>
+<a href="index.html" class="botao">volta</a>
+<style>
+    
+.img {
+    display: block;      
+    margin: 50px auto;    
+}
+
+
+.nuvem-pos {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    width: 100%;
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.botao:hover {
+    background-color: #45a049;
+}
+
+body {
+    font-family: "Georgia", serif;
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.folha {
+    background-color: #fff;
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    position: relative;
+    line-height: 1.6;
+    margin: 0 auto;  /* Centraliza sem flex */
+}
+
+.redacao {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.botao-voz {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.botao-voz:hover {
+    background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<div class="folha">
+    <div class="redacao" id="redacao">
+        <h2>Redação: jovens e financeiro</h2>
+        <p>
+     A situação económica de uma grande parcela da população brasileira está com uma situação financeira grave, no caso, está endividada com muitas contas para pagar, mas com a educação financeira e os jovens, é esperado que esse estado mude com o tempo.
+
+No mundo capitalista, onde quem manda é o dinheiro, as pessoas quem estão endividadas são facilmente influenciadas, com isso tem uma sociedade influenciável e na maioria das vezes com pouco estudo, levando a quem tem dinheiro liderar o resto, um exemplo disso são as empresas, que fazem os funcionários a trabalhar mais do que deveria, os chefes que ganham mais do que o justo e o próprio governo que não faz o correto.
+
+Mas essa situação está sendo mudado com o tempo, graças a educação que ensina os jovens a lidar com a financeira, ainda tem muitos casos de mal administrar financeira entre os jovens, mas ainda é menor que nas gerações passadas, como apontam diversos estudos que mostram o impacto positivo da educação financeira na formação de novas pessoas mais responsáveis com a própria renda Dessa forma, é possível concluir que a educação financeira na vida dos jovens está dando um grande marco a mudança, onde as pessoas futuramente serão menos influenciáveis por conta do dinheiro, mais ainda é importe ressaltar que essa mudança ainda está fraca e pode, deve ser apoiada, um bom jeito de incentivar isso é com a educação com leis e projetos de apoio a isso.
+        </p>
+    </div>
+    <button class="botao-voz" onclick="lerRedacao()">🔊 Ouvir Redação</button>
+</div>
+
+<script>
+function lerRedacao() {
+    const texto = document.getElementById('redacao').innerText;
+    const fala = new SpeechSynthesisUtterance(texto);
+    fala.lang = 'pt-BR';
+    fala.rate = 1; // velocidade da voz
+    speechSynthesis.speak(fala);
+}
+</script>
+
+</body>
+</html>
+
+           <img class="img" src="11.png" alt="nuvem-pos" width="70%" height="auto">

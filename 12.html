@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redação com Leitura em Voz</title>
+<a href="index.html" class="botao">volta</a>
+<style>
+   
+.img {
+    display: block;      
+    margin: 50px auto;    
+}
+
+
+.nuvem-pos {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    width: 100%;
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.botao:hover {
+    background-color: #45a049;
+}
+
+body {
+    font-family: "Georgia", serif;
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.folha {
+    background-color: #fff;
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    position: relative;
+    line-height: 1.6;
+    margin: 0 auto;  /* Centraliza sem flex */
+}
+
+.redacao {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.botao-voz {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.botao-voz:hover {
+    background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<div class="folha">
+    <div class="redacao" id="redacao">
+        <h2>Redação: cultura</h2>
+        <p>
+       A cultura brasileira está associada a festas e músicas do Brasil, como o Carnaval que é um exemplo clássico da cultura brasileira, uma festividade que não se limita só a dança e música do país, mas a uma festa muito aguardada no país.
+
+O Carnaval é uma festividade com um tamanho tão grande que quebra até mesmo a barrera nacional, e que ela não é comemorada somente no Brasil, mas também na Espanha, mesmo assim ainda tem preconceitos sobre ela, preconceitos que não vão só até o Carnaval, mas em toda a cultura brasileira.
+
+As festas, danças, história, músicas, cultura e até mesmo a própria existência de alguma manifestação cultural são motivos para pessoas de péssimo caráter tentaram acabar com a felicidade de outros, mas o que leva essa pessoa quererem fazer isso?
+
+Os motivos são diversos e com muitos objetivos, como exemplo: um chefe de empresa que pensa mais em lucro e não quer feriados, uma pessoa extremamente amargurada que gosta de acabar com a felicidade dos outros ou uma pessoa xenofóbica que não aceita outras culturas.
+
+Compreender as raízes dos ataques à cultura é o primeiro passo para o enfrentamento desse problema, e a resposta para esse problema é educar, resistir e reforçar o valor da tradição.
+        </p>
+    </div>
+    <button class="botao-voz" onclick="lerRedacao()">🔊 Ouvir Redação</button>
+</div>
+
+<script>
+function lerRedacao() {
+    const texto = document.getElementById('redacao').innerText;
+    const fala = new SpeechSynthesisUtterance(texto);
+    fala.lang = 'pt-BR';
+    fala.rate = 1; // velocidade da voz
+    speechSynthesis.speak(fala);
+}
+</script>
+
+</body>
+</html>
+
+          <img class="img" src="12.png" alt="nuvem-pos" width="70%" height="auto">

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redação com Leitura em Voz</title>
+<a href="index.html" class="botao">volta</a>
+<style>
+   
+.img {
+    display: block;      
+    margin: 50px auto;    
+}
+
+
+.nuvem-pos {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    width: 100%;
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.botao:hover {
+    background-color: #45a049;
+}
+
+body {
+    font-family: "Georgia", serif;
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.folha {
+    background-color: #fff;
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    position: relative;
+    line-height: 1.6;
+    margin: 0 auto;  /* Centraliza sem flex */
+}
+
+.redacao {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.botao-voz {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.botao-voz:hover {
+    background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<div class="folha">
+    <div class="redacao" id="redacao">
+        <h2>Redação: crima de agricultura e da biodiversidade </h2>
+        <p>
+       As mudanças climáticas no Brasil são uma realidade e compromete a vida das futuras gerações Como o pais depende da agricultura para a economia, a incerteza sobre o clima também prejudica a biodiversidade brasileira
+
+A mudança climática afeta não só a economia, mas também o meio ambiente, segundo o pesquisador do Instituto Nacional de Pesquisas da Amazónia (INPA) Jochen Shongart, somente nessas duas primeiras décadas do século XXI foram registrados nove eventos de cheias severas, o mesmo número registrado em todo o século passado. Inclusive a Amazónia sofra com secas e incêndios que afeta a biodiversidade do Brasil.
+
+Essas mudanças climáticas afeta a agricultura do Brasil, secas frequentes e frio extremo em algumas partes do Brasil afetam a agricultura local e isso afeta diretamente a economia local do Brasil
+
+O Brasil sendo um país que depende da agricultura e tem uma biodiversidade muito grande, é um dos mais prejudicados com as mudanças climáticas, por isso seria interessante que ele tivesse mais iniciativas para tentar diminuir essas mudanças, com mais leis que fossem contra a poluição, e um dos jeitos seria adotar o uso de mais usinas de energia renovável.
+        </p>
+    </div>
+    <button class="botao-voz" onclick="lerRedacao()">🔊 Ouvir Redação</button>
+</div>
+
+<script>
+function lerRedacao() {
+    const texto = document.getElementById('redacao').innerText;
+    const fala = new SpeechSynthesisUtterance(texto);
+    fala.lang = 'pt-BR';
+    fala.rate = 1; // velocidade da voz
+    speechSynthesis.speak(fala);
+}
+</script>
+
+</body>
+</html>
+
+
+          <img class="img" src="4.png" alt="nuvem-pos" width="70%" height="auto">

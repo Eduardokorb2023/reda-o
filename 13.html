@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redação com Leitura em Voz</title>
+<a href="index.html" class="botao">volta</a>
+<style>
+  
+.img {
+    display: block;      
+    margin: 50px auto;    
+}
+
+
+.nuvem-pos {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    width: 100%;
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.botao:hover {
+    background-color: #45a049;
+}
+
+body {
+    font-family: "Georgia", serif;
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.folha {
+    background-color: #fff;
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    position: relative;
+    line-height: 1.6;
+    margin: 0 auto;  /* Centraliza sem flex */
+}
+
+.redacao {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.botao-voz {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.botao-voz:hover {
+    background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<div class="folha">
+    <div class="redacao" id="redacao">
+        <h2>Redação: básico pra todos</h2>
+        <p>
+       O saneamento básico é uma das formas de garantira saúde em um determinado ambiente, ela é uma
+das coisas mais importantes quando se fala de prevenir doenças, antão pode-se concluir ser uma direito de qualquer ser humano.
+O direito a acesso ao acesso e água potável e uma esgoto encanado deveria ser de todos, mas a
+nação brasileira, sendo uma comunidade em desenvolvimento, ainda não consegue proporcionar esse direto a todos, indo contra o que a ONU que propor com a ODS. As ODS tem o objetivo de melhorar o mundo, e um dos objetivos é levar um melhor conforto de vida com o saneamento básico, sendo assim, o Brasil que se comprometeu a ajudar com nesses objetivos até 2030, tivesse uma iniciativa, a qual tem resultados positivos, mas lento.
+Além disso, a falta desse cuidado pode mostra outros problemas existentes nas regiões, como a desigualdade de renda e moradia, até mesmo as próprias doenças, já que nem todas as casas te a mesma estrutura e nem todas as familias a mesma renda, fazendo conque tenha uma parcela da sociedade que seja beneficiada.
+Assim seja possível concluir ser essencial investir em saneamento para evitar problemas, então seria de suma importância que houvesse uma proposta pela parte do governo para ter uma procura e reparo nessa área, também poderia a ver canais de comunicação com as pessoas e de orientação sobre esse assunto, e consequentemente levando a uma resolução não só do acesso, mas também de outras causas.
+        </p>
+    </div>
+    <button class="botao-voz" onclick="lerRedacao()">🔊 Ouvir Redação</button>
+</div>
+
+<script>
+function lerRedacao() {
+    const texto = document.getElementById('redacao').innerText;
+    const fala = new SpeechSynthesisUtterance(texto);
+    fala.lang = 'pt-BR';
+    fala.rate = 1; // velocidade da voz
+    speechSynthesis.speak(fala);
+}
+</script>
+
+</body>
+</html>
+
+          <img class="img" src="13.png" alt="nuvem-pos" width="70%" height="auto">

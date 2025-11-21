@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redação com Leitura em Voz</title>
+<a href="index.html" class="botao">volta</a>
+<style>
+  
+.img {
+    display: block;      
+    margin: 50px auto;    
+}
+
+
+.nuvem-pos {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    width: 100%;
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.botao:hover {
+    background-color: #45a049;
+}
+
+body {
+    font-family: "Georgia", serif;
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.folha {
+    background-color: #fff;
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    position: relative;
+    line-height: 1.6;
+    margin: 0 auto;  /* Centraliza sem flex */
+}
+
+.redacao {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.botao-voz {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.botao-voz:hover {
+    background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<div class="folha">
+    <div class="redacao" id="redacao">
+        <h2>Redação: trabalho voluntario muda vidas</h2>
+        <p>
+     
+O trabalho voluntário para a inclusão e respeito aos direitos humanos é uma maneira prática de ajudar a melhorar a sociedade, o trabalho tem o intuito de dar uma oportunidade de ajudar a classe menos favorecido.
+
+O gesto de ajudar o próximo é uma atitude adorável, mas pouco praticado no Brasil, um pais que grande parte da população é considerada de classe com poder de compra baixo, é por isso que é comum ver pessoas endividadas ou contando até com centavos, par fechar o més, além disso, tem a parcela da sociedade que passa fome, justamente por não conseguir o dinheiro suficiente para as compras.
+
+Al que entra o trabalho voluntário, com o intuito de ajudar no combate a forme e na inclusão social, o voluntarismo é uma pártica que ajuda o próximo sem esperar nada em troca, e isso vai a favor dos diretores humanos, sendo a favor dá igualdade.
+
+Dessa forma é possível concluir que o trabalho voluntario é só uma forma de ajudar e trazer dignidade para a classe menos desfavorecida, por isso, deveria ser valorizada e apoiada, no Brasil é de suma importância que tenha um apoio e um financiamento essa área, aposta em financiamentos para as instituições já existentes e na criação de leis que apoiação o voluntarismo, para benefício da população.
+        </p>
+    </div>
+    <button class="botao-voz" onclick="lerRedacao()">🔊 Ouvir Redação</button>
+</div>
+
+<script>
+function lerRedacao() {
+    const texto = document.getElementById('redacao').innerText;
+    const fala = new SpeechSynthesisUtterance(texto);
+    fala.lang = 'pt-BR';
+    fala.rate = 1; // velocidade da voz
+    speechSynthesis.speak(fala);
+}
+</script>
+
+</body>
+</html>
+
+            <img class="img" src="8.png" alt="nuvem-pos" width="70%" height="auto">

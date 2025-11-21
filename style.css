@@ -27,19 +27,22 @@ margin-bottom: 20px; /* Ajuste o valor conforme necessário */
 
 :root {
 --cor-principal: #ff0000;
---cor-secundaria: #1d3046;
+--cor-secundaria: #000000;
 --cor-destaque: #212121;
---cor-ttt: #34414f;
+--cor-ttt: #006aff;
 --cor-3:#000000;
 --cor-4:#45a7ce;
 }
 
 body {
-font-family: 'Chakra Petch', sans-serif;
-color: var(--cor-3);
+    font-family: 'Bai Jamjuree', sans-serif;
 
-transition: background-color 2s;
-
+    /* GIF de fundo */
+    background-image: url('1.gif');
+    background-repeat: no-repeat;        /* não repete */
+    background-position: center top;     /* centraliza horizontal e topo vertical */
+      background-size: 740px auto; 
+    background-attachment: fixed;        /* fica fixo na tela enquanto rola o conteúdo */
 }
 
 h1, h2, h5 {
@@ -68,4 +71,8 @@ color: var(--cor-destaque);
     font-size: 50px;  
     padding: 15px 30px;  
      border-radius: 20px;   
+}
+
+.mão {
+    border-radius: 20px; 
 }

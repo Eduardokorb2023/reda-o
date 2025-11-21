@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redação com Leitura em Voz</title>
+<a href="index.html" class="botao">volta</a>
+<style>
+   
+.img {
+    display: block;      
+    margin: 50px auto;    
+}
+
+
+.nuvem-pos {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    width: 100%;
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.botao:hover {
+    background-color: #45a049;
+}
+
+body {
+    font-family: "Georgia", serif;
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.folha {
+    background-color: #fff;
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    position: relative;
+    line-height: 1.6;
+    margin: 0 auto;  /* Centraliza sem flex */
+}
+
+.redacao {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.botao-voz {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.botao-voz:hover {
+    background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<div class="folha">
+    <div class="redacao" id="redacao">
+        <h2>Redação: covardia dos jogos</h2>
+        <p>
+       Os jogos de aposta é um problema que gera dependência nas pessoas que jogam, um dos motivos que faz com que eles sejam tão visitantes em pessoas que já são propensas ao vício é a dopamina Os jogos de apostas são um dos métodos mais covardes de retirar dinheiro das pessoas, já que a pessoa já viciada não tem como se defender e estar relacionado a sorte permite que a própria plataforma manipule os resultados.
+
+O vicio em jogos já é considerado uma doença, segundo a organização mundial da saúde (OMS) já reconhece os jogos de azar como um transtorno, por isso a pessoa precisa passar por um tratamento psicológico para esse vicio, e ainda não é só essa a consequência, milhares de pessoas estão endividadas por causa desse vício.
+
+No Brasil esse é um problema real que afeta uma parte da população, esse método mostra uma realidade que mostra que a população está procurando um método de conseguir dopamina, e essa felicidade temporária pode gerar consequências irreversíveis, um método que poderia ser adotado pelo governo é limitar a transmissão e o acesso das pessoas à esses jogos, também deveria ser obrigatoriamente mostra os pontos negativos, como acontece na caixa de cigarro.
+        </p>
+    </div>
+    <button class="botao-voz" onclick="lerRedacao()">🔊 Ouvir Redação</button>
+</div>
+
+<script>
+function lerRedacao() {
+    const texto = document.getElementById('redacao').innerText;
+    const fala = new SpeechSynthesisUtterance(texto);
+    fala.lang = 'pt-BR';
+    fala.rate = 1; // velocidade da voz
+    speechSynthesis.speak(fala);
+}
+</script>
+
+</body>
+</html>
+
+            <img class="img" src="7.png" alt="nuvem-pos" width="70%" height="auto">
